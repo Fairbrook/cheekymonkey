@@ -3,11 +3,11 @@ SCREEN_WIDTH = 1200
 SCREEN_HEIGHT = 800
 
 # How many hits can the containers take before being destroyed?
-CONTAINER_HEALTH = 3
+CONTAINER_HEALTH = 1
 
 # Container multiplication factor
 # Will create (Actual number of running pods * CONTAINER_FACTOR) crates in game. Each crate represents one pod
-CONTAINER_FACTOR = 1
+CONTAINER_FACTOR = 2
 
 # How many containers to spawn in offline mode
 OFFLINE_CRATE_COUNT = 30

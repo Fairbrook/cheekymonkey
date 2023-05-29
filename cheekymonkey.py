@@ -122,7 +122,7 @@ class MyGame(arcade.Window):
         x = 50
         y = int((SCREEN_HEIGHT / 2))
         # self.player = Player("./images/tiles/grassMid.png", x, y, scale=0.5, moment=pymunk.inf, mass=1)
-        self.player = Player("./images/Char_Monkey_Free_Images/Animations/monkey_idle.png", x, y, scale=0.5, moment=pymunk.inf, mass=1)
+        self.player = Player("./images/Char_Monkey_Free_Images/Animations/monkey_idle.png", x, y, scale=0.5, moment=float("inf"), mass=1)
         # self.player.center_x = SCREEN_WIDTH / 2
         # self.player.center_y = SCREEN_HEIGHT / 2
         self.dynamic_sprite_list.append(self.player)
@@ -172,7 +172,7 @@ class MyGame(arcade.Window):
 
         # Display game over screen when needed
         if self.game_over:
-            arcade.draw_text("Game Over", self.view_left + SCREEN_WIDTH / 4, self.view_bottom + SCREEN_HEIGHT / 2, arcade.color.BLACK, 100,  font_name = ["Impact", "Courier", "Helvetica"])
+            arcade.draw_text("Game Over", self.view_left + SCREEN_WIDTH / 4, self.view_bottom + SCREEN_HEIGHT / 2, arcade.color.BLACK, 100,  font_name = ("Impact", "Courier", "Helvetica"))
 
         # Once per split second
         if self.frame_count % 20 == 0:
@@ -200,7 +200,7 @@ class MyGame(arcade.Window):
         # Display last pod killed
         if self.LAST_POD_KILLED:
             output = f"Last pod killed: {self.LAST_POD_KILLED}"
-            arcade.draw_text(output, 20 + self.view_left, SCREEN_HEIGHT - 20 + self.view_bottom, arcade.color.WHITE, 12, font_name = ["Helvetica"])
+            arcade.draw_text(output, 20 + self.view_left, SCREEN_HEIGHT - 20 + self.view_bottom, arcade.color.WHITE, 12, font_name = "Helvetica")
 
         self.draw_time = timeit.default_timer() - draw_start_time
 
